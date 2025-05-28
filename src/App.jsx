@@ -9,7 +9,7 @@ const Orders = React.lazy(() => import('./pages/Orders'));
 const AddCustomer = React.lazy(() => import("./pages/AddCustomer"));
 const AddOrder = React.lazy(() => import("./pages/AddOrder"));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
-const Products = React.lazy(() => import('./pages/products'));
+const Products = React.lazy(() => import("./pages/products"));
 const ErrorA = React.lazy(() => import('./pages/ErrorA'));
 const ErrorB = React.lazy(() => import('./pages/ErrorB'));
 const ErrorC = React.lazy(() => import('./pages/ErrorC'));
@@ -53,8 +53,8 @@ function App() {
           <Route path="/listousers" element={<ListoUsers />} />
           <Route path="/customers/add" element={<AddCustomer />} />
           <Route path="/orders/add" element={<AddOrder />} />
-          <Route path="Products" element={<Products />} />
-          <Route path="/products/:id" element={<ProductDetail />} /> 
+          <Route path="/products" element={<Products />} />
+          <Route path="/Products/:id" element={<ProductDetail />} /> 
         </Route>
 
         {/* Auth Routes */}
