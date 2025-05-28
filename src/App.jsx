@@ -23,13 +23,6 @@ const Guesthome = React.lazy(() => import('./pages/guest/Guesthome'));
 const ProductCheck = React.lazy(() => import('./pages/guest/ProductCheck'));
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
 
-
-<Route element={<MainLayout />}>
-		<Routes>
-			    ...
-			    <Route path="/products/:id" element={<ProductDetail />} /> 
-		</Routes>
-</Route>
 import Loading from './components/Loading';
 import ListoUsers from './pages/ListoUsers';
 
