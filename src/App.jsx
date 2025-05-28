@@ -9,6 +9,7 @@ const Orders = React.lazy(() => import('./pages/Orders'));
 const AddCustomer = React.lazy(() => import("./pages/AddCustomer"));
 const AddOrder = React.lazy(() => import("./pages/AddOrder"));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
+const Products = React.lazy(() => import('./pages/products'));
 const ErrorA = React.lazy(() => import('./pages/ErrorA'));
 const ErrorB = React.lazy(() => import('./pages/ErrorB'));
 const ErrorC = React.lazy(() => import('./pages/ErrorC'));
@@ -20,6 +21,15 @@ const Forgot = React.lazy(() => import('./pages/auth/Forgot'));
 const Register = React.lazy(() => import('./pages/auth/Register'));
 const Guesthome = React.lazy(() => import('./pages/guest/Guesthome'));
 const ProductCheck = React.lazy(() => import('./pages/guest/ProductCheck'));
+const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
+
+
+<Route element={<MainLayout />}>
+		<Routes>
+			    ...
+			    <Route path="/products/:id" element={<ProductDetail />} /> 
+		</Routes>
+</Route>
 import Loading from './components/Loading';
 import ListoUsers from './pages/ListoUsers';
 
@@ -43,6 +53,8 @@ function App() {
           <Route path="/listousers" element={<ListoUsers />} />
           <Route path="/customers/add" element={<AddCustomer />} />
           <Route path="/orders/add" element={<AddOrder />} />
+          <Route path="Products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetail />} /> 
         </Route>
 
         {/* Auth Routes */}

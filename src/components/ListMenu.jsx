@@ -1,4 +1,4 @@
-import { MdDashboard } from "react-icons/md";
+import { MdDashboard,MdFastfood } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 export default function ListMenu() {
     const menuClass = ({ isActive }) =>
@@ -8,48 +8,58 @@ export default function ListMenu() {
             "text-gray-600 hover:text-hijau hover:bg-green-200 hover:font-extrabold"
         }`
     return (
-        
-    
+
+
         <div id="sidebar-menu" className="mt-10">
-                <ul id="menu-list" className="space-y-3">
-                    <li>
+            <ul id="menu-list" className="space-y-3">
+                <li>
                     <NavLink id="menu-1" to="/" className={menuClass}>
                         <MdDashboard className="mr-4 text-xl" />
                         <span>Dashboard</span>
                     </NavLink>
-                    </li>
-                    
-                    <li>
-                        <NavLink id="menu-2" to="/orders" className={menuClass}>
+                </li>
+
+                <li>
+                    <NavLink id="menu-2" to="/orders" className={menuClass}>
                         Orders
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink id="menu-3" to="/customers" className={menuClass}>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink id="menu-3" to="/customers" className={menuClass}>
                         Customers
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink id="menu-2" to="/listousers" className={menuClass}>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        id="menu-4"
+                        to="/products"
+                        className={menuClass}
+                    >
+                        <MdFastfood className="mr-4 text-xl" />
+                        Products
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink id="menu-2" to="/listousers" className={menuClass}>
                         List Of Users
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink id="menu-3" to="/ErrorA" className={menuClass}>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink id="menu-3" to="/ErrorA" className={menuClass}>
                         Error 400
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink id="menu-3" to="/ErrorB" className={menuClass}>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink id="menu-3" to="/ErrorB" className={menuClass}>
                         Error 401
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink id="menu-3" to="/ErrorC" className={menuClass}>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink id="menu-3" to="/ErrorC" className={menuClass}>
                         Error 403
-                        </NavLink>
-                    </li>
-                </ul>
-            </div>
+                    </NavLink>
+                </li>
+            </ul>
+        </div>
     );
 }
