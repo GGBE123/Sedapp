@@ -54,7 +54,7 @@ function App() {
           <Route path="/customers/add" element={<AddCustomer />} />
           <Route path="/orders/add" element={<AddOrder />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/Products/:id" element={<ProductDetail />} /> 
+          <Route path="/products/:id" element={<ProductDetail />} /> 
         </Route>
 
         {/* Auth Routes */}

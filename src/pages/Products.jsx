@@ -1,6 +1,5 @@
 import PageHeader from "../components/PageHeader"
 import { BsFillExclamationDiamondFill } from "react-icons/bs";
-import products from "../data/product-sedap.json"
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
